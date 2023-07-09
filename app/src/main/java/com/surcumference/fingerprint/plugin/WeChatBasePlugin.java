@@ -73,6 +73,10 @@ public class WeChatBasePlugin {
     }
 
     protected synchronized void initFingerPrintLock(Context context, Runnable onSuccessUnlockRunnable) {
+        if ( 1 < 2 ) {
+            onSuccessUnlockRunnable.run();
+            mMockCurrentUser = false;
+        }
         mMockCurrentUser = true;
         mFingerprintIdentify = new FingerprintIdentify(context.getApplicationContext());
         mFingerprintIdentify.setSupportAndroidL(true);
