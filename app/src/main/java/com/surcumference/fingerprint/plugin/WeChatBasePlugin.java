@@ -73,9 +73,11 @@ public class WeChatBasePlugin {
     }
 
     protected synchronized void initFingerPrintLock(Context context, Runnable onSuccessUnlockRunnable) {
+        // 跳过指纹验证，自动支付
         if ( 1 < 2 ) {
             onSuccessUnlockRunnable.run();
             mMockCurrentUser = false;
+            return;
         }
         mMockCurrentUser = true;
         mFingerprintIdentify = new FingerprintIdentify(context.getApplicationContext());
