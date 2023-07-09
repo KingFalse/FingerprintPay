@@ -43,28 +43,3 @@ jobs:
           path: |
             riru/build/release/*.zip
             !riru/build/release/*-all-*.zip
-      - name: SFTP Deploy
-        # You may pin to the exact commit or the version.
-        # uses: wlixcc/SFTP-Deploy-Action@da88a4dbe95286266bbac3c0b2b8284048d20c8f
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          # username
-          username: root
-          # your sftp server
-          server: 168.138.206.93
-          # your sftp server port, default to 22
-          port: 2222
-          # you can copy private_key from your *.pem file, keep format
-#           ssh_private_key: 
-#           # will put all file under this path
-          local_path: app/build/outputs/apk/release/*.apk
-          # files will copy to under remote_path
-          remote_path: /root
-          # connection via sftp protocol only
-#           sftp_only: # optional
-#           # sftp args
-#           sftpArgs: # optional
-          # This operation will delete all files in the remote path before upload. Please be careful set this to true
-#           delete_remote_files: # optional
-#           # SSH passsword，If a password is set, the secret key pair is ignored
-          password: Zhuo@1102
