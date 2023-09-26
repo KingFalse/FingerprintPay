@@ -62,6 +62,8 @@ project.ext.appInfo = [
 apply from: 'debug.gradle'
 apply from: 'update-json.gradle'
 dependencies {
+    implementation("com.alibaba.fastjson2:fastjson2:2.0.40")
+    implementation("org.jsoup:jsoup:1.16.1")
     implementation 'com.wei.android.lib:fingerprintidentify:1.2.6'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.okhttp3:okhttp:3.12.8'
